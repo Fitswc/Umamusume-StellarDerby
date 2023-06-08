@@ -1016,3 +1016,147 @@ country_event = {
 		}
 	}
 }
+
+
+
+
+
+######APⅡ
+
+country_event = {
+	id = uma_ap.40
+	title = uma_ap.40.title
+	desc = uma_ap.40.desc
+	trigger = {
+		AND = {
+			has_technology = tech_uma_realm_theory
+			has_technology = tech_uma_factor_theory
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		add_modifier = {
+			modifier = uma_research_difference
+		}
+		hidden_effect = {
+			add_tech_progress = {
+				tech = tech_uma_factor_1
+				progress = 0.01
+			}
+			add_tech_progress = {
+				tech = tech_uma_realm_1
+				progress = 0.01
+			}
+			set_variable = {
+				which = uma_realm_support
+				value = 0
+			}
+			set_variable = {
+				which = uma_factor_support
+				value = 0
+			}
+		}
+	}
+}
+
+
+##When Tech Increase
+country_event = {
+	id = uma_ap.41
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+			has_technology = tech_uma_realm_theory
+			has_technology = tech_uma_factor_theory
+			has_modifier = uma_research_difference
+		}
+	}
+
+	immediate ={
+		if = {
+			limit = {
+				last_increased_tech = tech_uma_factor_1
+			}
+			change_variable = {
+				which = uma_factor_support
+				value = 20
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = 5
+			}
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_uma_factor_2
+			}
+			change_variable = {
+				which = uma_factor_support
+				value = 30
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = 6
+			}
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_uma_factor_3
+			}
+			change_variable = {
+				which = uma_factor_support
+				value = 40
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = 7
+			}
+		}
+
+		##Realm
+
+		if = {
+			limit = {
+				last_increased_tech = tech_uma_realm_1
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = -5
+			}
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_uma_realm_2
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = -6
+			}
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_uma_realm_3
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = -7
+			}
+		}
+	}
+}

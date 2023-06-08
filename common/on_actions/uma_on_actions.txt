@@ -182,6 +182,8 @@ on_tech_increased = {
 		uma_fallen_empire.1111
 		uma_ss_arc.20
 		uma_ss_arc.22
+		uma_ap.40
+		uma_ap.41
 	}
 }
 

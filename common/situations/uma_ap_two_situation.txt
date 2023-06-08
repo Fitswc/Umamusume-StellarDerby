@@ -1,0 +1,76 @@
+uma_ap_two_situation = {
+#以本局势为例，需要的本地化key为：
+#test_situation：当局势存在之时显示，可以使用支架命令，如[Target.GetName]等
+#test_situation_type：当局势不存在之时所展示的名称（使用start_situation之时展示的局势名称，此时无法使用支架命令）
+#test_situation_desc：局势描述，可以使用支架命令
+#test_situation_monthly_change_tooltip：描述玩家可以通过怎样的操作影响局势进程。
+    #可以声明多个以满足不同情况
+    picture = GFX_evt_assembly_fight #声明局势图片
+    #picture = {    #triggered_picture， 类似事件一样，局势可以通过满足不同trigger显示不同图片
+    #   picture = GFX_evt_alien_nature
+    #   trigger = {
+
+    #   }
+    #}
+    #可以声明多个以满足不同情况
+    category = neutral #控制局势应用在UI上的颜色，属性有positive/negative/neutral三种。
+    #通俗来说三种对应局势的：好，坏，有好有坏
+    complete_icon = GFX_situation_approach_unity   #定义进度条右方的图标
+    complete_icon_frame = GFX_situation_outcome_frame_blue #定义进度条右方图标的外框
+    fail_icon = GFX_situation_approach_unity        #定义进度条左方的图标
+    fail_icon_frame = GFX_situation_outcome_frame_blue #定义进度条左方图标的外框
+
+    on_start = { #当局势被创造之时触发的效果
+		set_variable = {
+			which = uma_realm_support
+			value = owner.uma_realm_support
+		}
+		set_variable = {
+			which = uma_factor_support
+			value = owner.uma_factor_support
+		}
+		set_situation_flag = uma_ap_two_sitaution
+    }
+    on_progress_complete = { #当完成局势之时触发的效果
+		#Stand Still
+        #蠢驴建议最后加上destroy_situation = this以结束局势（虽然不加也会自己删）
+#        destroy_situation = this
+    }
+    on_fail = { #当局势归0之时触发的效果
+		#Stand Still
+ #       destroy_situation = this
+    }
+    modifier = {
+
+	} #给予正在经历局势的国家的修正
+
+
+    start_value = 50 #局势将从何值开始进行
+    progress_direction = bidirectional #局势进度类型 monodirectional/bidirectional（单向/双向 默认为单向）
+    complete_category = positive        #效果为category，只有局势进度类型为双向（bidirectional）之时才生效，只影响右方
+    fail_category = positive           #效果为category，只有局势进度类型为双向（bidirectional）之时才生效，只影响左方
+
+    stages = {
+        mid_stage = {   #本地化key，可以定义额外的本地化samplet_stage_desc以显示提示
+            icon = GFX_situation_stage_1 #图标
+            icon_background = GFX_situation_stage_frame_green #背景
+            end = 0 #该阶段结束所需的进度
+            custom_tooltip = uma_ap_two_situation_stage_tooltip #显示在阶段的提示当中（on_first_enter不会显示，因为这将透露修正）
+            #以下条目效果同上
+            modifier = {
+
+			}
+        }
+    }
+#L领域 R因子
+    monthly_progress = { #每个月刷新一次进度
+        base = 0 #默认的月进度
+    }
+
+    approach = {
+        name = uma_ap_two_situation_approach_A   #本地化key，可以定义额外的本地化approach_a_desc以显示提示
+        icon = GFX_situation_approach_shrug
+        icon_background = GFX_situation_approach_bg_yellow
+        default = yes   #如果为yes，局势开始之时将默认该措施设置为当前采用的措施
+    }
+}

@@ -1707,3 +1707,158 @@ tech_uma_factor_tuner = { #TODO:科技因子调律器图标更换
 		planet_researchers_produces_mult = 0.05
 	}
 }
+
+tech_uma_factor_theory = {
+	cost = 30000
+	area = society
+	tier = 5
+	category = { biology }
+
+	weight = 10000
+	potential = {
+		AND = {
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+
+	modifier = {
+
+	}
+}
+
+tech_uma_realm_theory = {
+	cost = 30000
+	area = society
+	tier = 5
+	category = { biology }
+
+	weight = 10000
+	potential = {
+		AND = {
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+
+	modifier = {
+
+	}
+}
+
+
+
+tech_uma_factor_1 = {
+	cost = 300
+	area = society
+	tier = 1
+	category = {biology}
+
+	weight = 0
+	potential = {
+		AND = {
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+	modifier = {
+
+	}
+}
+
+tech_uma_factor_2 = {
+	cost = 300
+	area = society
+	tier = 1
+	category = {biology}
+
+	prerequisites = { tech_uma_factor_1 }
+	weight = 0
+	potential = {
+		AND = {
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+	modifier = {
+
+	}
+}
+
+tech_uma_factor_3 = {
+	cost = 300
+	area = society
+	tier = 1
+	category = {biology}
+
+	prerequisites = { tech_uma_factor_2}
+	weight = 0
+	potential = {
+		AND = {
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+	modifier = {
+
+	}
+}
+
+
+
+
+tech_uma_realm_1 = {
+	cost = 300
+	area = society
+	tier = 1
+	category = {biology}
+
+	weight = 0
+	potential = {
+		AND = {
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+	modifier = {
+
+	}
+}
+
+tech_uma_realm_2 = {
+	cost = 300
+	area = society
+	tier = 1
+	category = {biology}
+
+	prerequisites = { tech_uma_realm_1 }
+	weight = 0
+	potential = {
+		AND = {
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+	modifier = {
+
+	}
+}
+
+tech_uma_realm_3 = {
+	cost = 300
+	area = society
+	tier = 1
+	category = {biology}
+
+	prerequisites = { tech_uma_realm_2}
+	weight = 0
+	potential = {
+		AND = {
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+	modifier = {
+
+	}
+}
