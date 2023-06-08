@@ -73,4 +73,16 @@ uma_ap_two_situation = {
         icon_background = GFX_situation_approach_bg_yellow
         default = yes   #如果为yes，局势开始之时将默认该措施设置为当前采用的措施
     }
+
+	approach = {
+		name = uma_ap_two_situation_approach_B
+		icon = GFX_situation_approach_heart
+        icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			situation_event = {
+				id = uma_ap.42
+			}
+			set_situation_approach = uma_ap_two_situation_approach_A
+		}
+	}
 }

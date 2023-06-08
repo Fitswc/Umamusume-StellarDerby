@@ -9,3 +9,39 @@ uma_refresh_speical_leader_potrait_effect:0 "§Y手动还原所有的特殊领�
 edict_uma_use_goods_in_shop:0 "商城道具使用"
 edict_uma_use_goods_in_shop_desc:0 "在这里，我们可以使用从§Y商城!购买的道具，并获得各种buff。"
 uma_enter_goods_use_event:0 "§Y进入道具使用界面§!"
+
+
+
+##APⅡ
+uma_increase_factor_money: "提高对因子的研究经费"
+uma_increase_factor_money_desc: "中央特雷森宣布对因子追加研究经费，这无疑表现了国家在这两个项目上的态度。"
+uma_increase_realm_money: "提高对领域的研究经费"
+uma_increase_realm_money_desc: "中央特雷森宣布对领域追加研究经费，这无疑表现了国家在这两个项目上的态度。"
+uma_increase_factor_words: "发表有利于因子的文章"
+uma_increase_factor_words_desc: "一名颇有名望的科学家发表了一篇支持因子的文章，虽然没有什么真材实料，但人们显然吃这一套。"
+uma_increase_realm_words: "发表有利于领域的文章"
+uma_increase_realm_words_desc: "一名颇有名望的科学家发表了一篇支持领域的文章，虽然没有什么真材实料，但人们显然吃这一套。（"
+uma_increase_factor_research: "质疑因子研究"
+uma_increase_factor_research_desc: "一个科学家群体公开发表了对因子研究的质疑，详细列举出研究中存在问题的部分，不管这些质疑是否合理，对因子研究的打击是真实的。"
+uma_increase_realm_research: "质疑领域研究"
+uma_increase_realm_research_desc: "一个科学家群体公开发表了对领域研究的质疑，详细列举出研究中存在问题的部分，不管这些质疑是否合理，对领域研究的打击是真实的。"
+uma_increase_factor_problem: "曝光因子研究存在的伦理问题"
+uma_increase_factor_problem_desc: "某位匿名马娘在网上爆料了因子研究中对科学伦理观产生冲击的内容，引起了轩然大波，大量马娘开始参与对因子的声讨。"
+uma_increase_realm_problem: "曝光领域研究存在的伦理问题"
+uma_increase_realm_problem_desc: "某位匿名马娘在网上爆料了领域研究中对科学伦理观产生冲击的内容，引起了轩然大波，大量马娘开始参与对领域的声讨。"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

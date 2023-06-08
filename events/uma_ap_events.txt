@@ -1059,6 +1059,17 @@ country_event = {
 			}
 		}
 	}
+	#after = {
+	#	create_message = {
+	#		type =
+	#		localization =
+	#		days =
+	#		custom_toast_content_text =
+	#		custom_toast_content_icon =
+	#		target =
+	#		variable =
+	#	}
+	#}
 }
 
 
@@ -1129,6 +1140,10 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_uma_realm_1
 			}
+			change_variable = {
+				which = uma_realm_support
+				value = 20
+			}
 			every_situation = {
 				limit = {
 					has_situation_flag = uma_ap_two_sitaution
@@ -1139,6 +1154,10 @@ country_event = {
 		if = {
 			limit = {
 				last_increased_tech = tech_uma_realm_2
+			}
+			change_variable = {
+				which = uma_realm_support
+				value = 30
 			}
 			every_situation = {
 				limit = {
@@ -1151,12 +1170,57 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_uma_realm_3
 			}
+			change_variable = {
+				which = uma_realm_support
+				value = 40
+			}
 			every_situation = {
 				limit = {
 					has_situation_flag = uma_ap_two_sitaution
 				}
 				add_situation_progress = -7
 			}
+		}
+	}
+}
+
+#指南
+situation_event = {
+	id = uma_ap.42
+}
+
+
+#月检运算
+country_event = {
+	id = uma_ap.43
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_modifier = uma_research_difference
+	}
+	immediate = {
+		if = {
+			limit = {
+				check_variable = {
+					which = uma_factor_support
+					value >= uma_realm_support
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.44
+	title = DEEP
+	desc = uma_ap.43
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		AND = {
+			exists = event_target:uma_is_leader_deep
 		}
 	}
 }

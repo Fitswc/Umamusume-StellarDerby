@@ -131,3 +131,279 @@ uma_refresh_speical_leader_potrait = {
 	}
 
 }
+
+
+###APⅡ
+uma_increase_factor_money = {
+	length = 100
+	resources = {
+		category = edicts
+		cost = {
+			influence = 30
+		}
+	}
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+	allow = {
+		has_modifier = uma_research_difference
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_factor_support
+				value = 30
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = 7
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+uma_increase_realm_money = {
+	length = 100
+	resources = {
+		category = edicts
+		cost = {
+			influence = 30
+		}
+	}
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+	allow = {
+		has_modifier = uma_research_difference
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_realm_support
+				value = 30
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = -7
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+uma_increase_factor_words = {
+	length = 100
+	resources = {
+		category = edicts
+		cost = {
+			influence = 20
+		}
+	}
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+	allow = {
+		has_modifier = uma_research_difference
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_realm_support
+				value = 20
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = 6
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+uma_increase_realm_words = {
+	length = 100
+	resources = {
+		category = edicts
+		cost = {
+			influence = 20
+		}
+	}
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+	allow = {
+		has_modifier = uma_research_difference
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_realm_support
+				value = 20
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = -6
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+uma_increase_factor_research = {
+	length = 100
+	resources = {
+		category = edicts
+		cost = {
+			influence = 20
+		}
+	}
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+	allow = {
+		has_modifier = uma_research_difference
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_realm_support
+				value = 20
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = 7
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+uma_increase_realm_research = {
+	length = 100
+	resources = {
+		category = edicts
+		cost = {
+			influence = 20
+		}
+	}
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+	allow = {
+		has_modifier = uma_research_difference
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_realm_support
+				value = 20
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = -7
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+uma_increase_factor_problem = {
+	length = 100
+	resources = {
+		category = edicts
+		cost = {
+			influence = 30
+		}
+	}
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+	allow = {
+		has_modifier = uma_research_difference
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_realm_support
+				value = 30
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = 8
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+uma_increase_realm_problem = {
+	length = 100
+	resources = {
+		category = edicts
+		cost = {
+			influence = 30
+		}
+	}
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+	allow = {
+		has_modifier = uma_research_difference
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_realm_support
+				value = 30
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_ap_two_sitaution
+				}
+				add_situation_progress = -8
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
