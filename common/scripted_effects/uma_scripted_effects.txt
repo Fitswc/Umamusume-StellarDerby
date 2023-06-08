@@ -4581,3 +4581,39 @@ uma_fallen_empire_gift_effect = {
 		}
 	}
 }
+
+##求绝对值运算
+uma_abs = {
+	if = {
+		limit = {
+			check_variable = {
+				which = $VAL_1$
+				value >= $VAL_2$
+			}
+		}
+		subtract_variable = {
+			which = $VAL_1$
+			value = $VAL_2$
+		}
+		set_variable = {
+			which = $VAL_3$
+			value = $VAL_1$
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = $VAL_1$
+				value <= $VAL_2$
+			}
+		}
+		subtract_variable = {
+			which = $VAL_2$
+			value = $VAL_1$
+		}
+		set_variable = {
+			which = $VAL_3$
+			value = $VAL_2$
+		}
+	}
+}

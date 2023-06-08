@@ -1200,12 +1200,21 @@ country_event = {
 		has_modifier = uma_research_difference
 	}
 	immediate = {
+		uma_abs = {
+			VAL_1 = uma_factor_support
+			VAL_2 = uma_realm_support
+			VAL_3 = uma_result
+		}
 		if = {
 			limit = {
 				check_variable = {
-					which = uma_factor_support
-					value >= uma_realm_support
+					which = uma_result
+					value >= 50
 				}
+			}
+			country_event = {
+				id = uma_ap.44
+				days = 50
 			}
 		}
 	}
