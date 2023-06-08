@@ -1207,9 +1207,15 @@ country_event = {
 		}
 		if = {
 			limit = {
-				check_variable = {
-					which = uma_result
-					value >= 50
+				AND = {
+					check_variable = {
+						which = uma_result
+						value >= 50
+					}
+					check_variable = {
+						which = uma_realm_support
+						value > uma_factor_support
+					}
 				}
 			}
 			country_event = {
@@ -1223,13 +1229,94 @@ country_event = {
 country_event = {
 	id = uma_ap.44
 	title = DEEP
-	desc = uma_ap.43
+	desc = uma_ap.44.desc
 	is_triggered_only = yes
 	diplomatic = yes
 
 	trigger = {
 		AND = {
 			exists = event_target:uma_is_leader_deep
+		}
+	}
+
+	picture_event_data = {
+		portrait = DEEP_COMM
+		room = traincenter_05_room
+	}
+
+	option = {
+		name = uma_ap.44.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.45
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = uma_ap.45
+	title = DEEP
+	desc = uma_ap.45.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		AND = {
+			exists = event_target:uma_is_leader_deep
+		}
+	}
+
+	picture_event_data = {
+		portrait = DEEP_ANG
+		room = traincenter_05_room
+	}
+
+	option = {
+		name = uma_ap.45.a
+		country_event = {
+			id = uma_ap.46
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.46
+	title = DEEP
+	desc = uma_ap.46.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		AND = {
+			exists = event_target:uma_is_leader_deep
+		}
+	}
+
+	picture_event_data = {
+		portrait = DEEP_ANG
+		room = traincenter_05_room
+	}
+
+	option = {
+		name = uma_ap.46.a
+		response_text = uma_ap.46.a.resp
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_realm_support
+				value = 30
+			}
+		}
+	}
+	option = {
+		name = uma_ap.46.b
+		response_text = uma_ap.46.b.resp
+		hidden_effect = {
+			change_variable = {
+				which = uma_realm_support
+				value = 10
+			}
 		}
 	}
 }
