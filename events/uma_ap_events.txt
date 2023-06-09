@@ -1205,6 +1205,19 @@ country_event = {
 			VAL_2 = uma_realm_support
 			VAL_3 = uma_result
 		}
+	}
+}
+
+
+country_event = {
+	id = uma_ap.2088
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_modifier = uma_research_difference
+	}
+	immediate = {
 		if = {
 			limit = {
 				AND = {
@@ -1223,9 +1236,29 @@ country_event = {
 				days = 50
 			}
 		}
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						which = uma_result
+						value >= 50
+					}
+					check_variable = {
+						which = uma_realm_support
+						value < uma_factor_support
+					}
+				}
+			}
+			country_event = {
+				id = uma_ap.48
+				days = 50
+			}
+		}
 	}
 }
 
+
+##Deep
 country_event = {
 	id = uma_ap.44
 	title = DEEP
@@ -1317,6 +1350,118 @@ country_event = {
 				which = uma_realm_support
 				value = 10
 			}
+		}
+	}
+}
+
+
+
+##Grass
+country_event = {
+	id = uma_ap.48
+	title = GRASS
+	desc = uma_ap.48.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = uma_grass_to_ap_two
+	}
+
+	picture_event_data = {
+		portrait = GW_AP
+		room = uma_ap_gw_room
+	}
+
+	option = {
+		name = uma_ap.48.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.49
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.49
+	title = GRASS
+	desc = uma_ap.49.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = uma_grass_to_ap_two
+	}
+
+	picture_event_data = {
+		portrait = GW_AP
+		room = uma_ap_gw_room
+	}
+
+	option = {
+		name = uma_ap.49.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.50
+	title = GRASS
+	desc = uma_ap.50.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = uma_grass_to_ap_two
+	}
+
+	picture_event_data = {
+		portrait = GW_AP
+		room = uma_ap_gw_room
+	}
+
+	option = {
+		name = uma_ap.50.a
+		response_text = uma_ap.50.a.resp
+	}
+	option = {
+		name = uma_ap.50.b
+		response_text = uma_ap.50.b.resp
+		hidden_effect = {
+
+		}
+	}
+}
+
+##每年因子支持度+10
+country_event = {
+	id = uma_ap.51
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = finish_ap_two_difference
+		}
+	}
+
+	immediate = {
+		change_variable = {
+			which = uma_factor_support
+			value = 10
+		}
+		every_situation = {
+			limit = {
+				has_situation_flag = uma_ap_two_sitaution
+			}
+			add_situation_progress = 4
+		}
+	}
+	after = {
+		country_event = {
+			id = uma_ap.51
+			days = 365
 		}
 	}
 }

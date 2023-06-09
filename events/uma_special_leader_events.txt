@@ -1208,6 +1208,9 @@ country_event = {
 			modifier = uma_grass_wonder_kenshi_library
 			days = -1
 		}
+		hidden_effect = {
+			set_country_flag = uma_grass_to_ap_two
+		}
 	}
 
 }

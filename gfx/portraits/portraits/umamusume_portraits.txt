@@ -261,6 +261,7 @@ portraits = {
     DEEP_HAP = { texturefile = "gfx/models/portraits/umamusume/Deep_5.DDS" }
     DEEP_SAD = { texturefile = "gfx/models/portraits/umamusume/Deep_6.DDS" }
     DEEP_COMMUNICATION = { texturefile = "gfx/models/portraits/umamusume/Deep_in_communication.DDS" }
+    GW_AP = { texturefile = "gfx/models/portraits/umamusume/GW_AP.dds" }
 }
 
 portrait_groups = {
