@@ -1,0 +1,13 @@
+
+message_type = {
+	key = "UMA_BATTLE_START_MESSAGE_TYPE"
+	icon = "GFX_message_other_alert"
+
+	#sound = "spaceport_complete_alert"
+	name = "UMA_BATTLE_START_MESSAGE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_yellow"
+	default_toast = yes
+
+	category = government
+}

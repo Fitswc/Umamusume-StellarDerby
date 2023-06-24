@@ -1059,17 +1059,16 @@ country_event = {
 			}
 		}
 	}
-	#after = {
-	#	create_message = {
-	#		type =
-	#		localization =
-	#		days =
-	#		custom_toast_content_text =
-	#		custom_toast_content_icon =
-	#		target =
-	#		variable =
-	#	}
-	#}
+	after = {
+		create_message = {
+			type = UMA_BATTLE_START_MESSAGE_TYPE
+			localization = UMA_BATTLE_START_MESSAGE_TYPE_DESC
+			days = @toast_message_days
+#			custom_toast_content_text =
+#			custom_toast_content_icon =
+			target = this
+		}
+	}
 }
 
 
@@ -1187,6 +1186,14 @@ country_event = {
 #指南
 situation_event = {
 	id = uma_ap.42
+	title = uma_ap.42.title
+	desc = uma_ap.42.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.42.a
+
+	}
 }
 
 

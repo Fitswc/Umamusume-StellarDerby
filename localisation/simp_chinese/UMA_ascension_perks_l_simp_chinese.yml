@@ -17,3 +17,7 @@ uma_ap_two_situation: "§R领域§!-§B因子§!支持度"
 uma_ap_two_situation_type: ""
 uma_ap_two_situation_stage_tooltip: "支持度1：1"
 uma_ap_two_situation_approach_A_desc: "让我们拭目以待吧"
+
+UMA_BATTLE_START_MESSAGE_TITLE: "§R领域§!-§B因子§!派斗争开始！"
+UMA_BATTLE_START_MESSAGE_TYPE_TITLE: "$UMA_BATTLE_START_MESSAGE_TITLE$"
+UMA_BATTLE_START_MESSAGE_TYPE_DESC: "在接下来的一段时间中，因子派与领域派将展开斗争，你可以通过各种手段选择您想要支持的派系.\n§Y派系斗争将影响您的二段飞升路线§!\n游玩指南可随时在查看支持度局势界面观看"
