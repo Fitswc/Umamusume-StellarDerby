@@ -12,3 +12,7 @@ jobs:
         game: stellaris
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required, secret is automatically set by github
+permissions:
+  checks: write
+  contents: read
+  statuses: write
